@@ -16,8 +16,20 @@ button {
   border-radius: 16px;
   width: 96px;
   height: 32px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   margin: 12px;
+}
+
+button:hover {
+  background-color: hsl(0, 0%, 10%);
+  transition-duration: 0.4s;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+button:active {
+  background-color: hsl(0, 0%, 50%);
+  transition-duration: 0.4s;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .sizing {
@@ -35,8 +47,12 @@ input {
   border-radius: 16px;
   width: 96px;
   height: 32px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   margin: 12px;
+}
+
+input:hover {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .container {
   height: 100vh;
