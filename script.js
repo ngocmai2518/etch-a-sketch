@@ -74,3 +74,21 @@ reset.onclick = () => {
     square.classList.remove('hover');
   }
 }
+
+const grid = document.querySelector('#gridBtn');
+let currentGridMode = 'show';
+grid.onclick = () => {
+  if (currentGridMode === 'show') {
+    for (const square of squares) {
+      square.classList.add('hide-grid')
+    }
+    grid.innerHTML = 'Show Grid';
+    currentGridMode = 'hide';
+  } else if (currentGridMode === 'hide') {
+    for (const square of squares) {
+      square.classList.remove('hide-grid')
+    }
+    grid.innerHTML = 'Hide Grid';
+    currentGridMode = 'show';
+  }
+}
