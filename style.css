@@ -1,0 +1,23 @@
+.board {
+  width: 360px;
+  height: 360px;
+  border: 0.5px solid grey;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex: 1;
+}
+
+.square {
+  background-color: white;
+  border: 0.5px solid grey;
+  margin: 0px;
+  flex: 1;
+}
+
+.square:hover {
+  background-color: rgb(38, 38, 38);
+}
