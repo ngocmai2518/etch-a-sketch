@@ -1,4 +1,5 @@
 body {
+  background-color: rgba(231, 231, 231, 0.1);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #333;
 }
@@ -9,30 +10,38 @@ body {
   padding: 48px;
 }
 
+.navigation {
+  margin-top: 24px;
+}
+
+.board {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
 button {
   background-color: #333;
   color: whitesmoke;
+  font-size: 12px;
   border: 0px;
   border-radius: 16px;
   width: 96px;
   height: 32px;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-  margin: 12px;
+  box-shadow: rgba(0, 0, 0, 0.36) 0px 2px 5px;
+  margin: 8px;
+  transition: 0.3s ease;
 }
 
 button:hover {
   background-color: hsl(0, 0%, 10%);
-  transition-duration: 0.4s;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
 }
 
 button:active {
   background-color: hsl(0, 0%, 50%);
-  transition-duration: 0.4s;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .sizing {
+  margin: 0px 24px;
   color:#333;
   font-size: 12px;
   font-weight: 200px;
@@ -45,14 +54,14 @@ input {
   background-color: rgb(246, 246, 246);
   border: 0.5px solid #333;
   border-radius: 16px;
-  width: 96px;
+  width: 128px;
   height: 32px;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 12px;
 }
 
 input:hover {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
 }
 .container {
   height: 100vh;
@@ -75,7 +84,7 @@ input:hover {
 }
 
 .side {
-width: 200px;
+width: 300px;
 flex-shrink: 0;
 }
 

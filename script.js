@@ -5,12 +5,11 @@ const erase = document.querySelector('#eraseBtn');
 const clear = document.querySelector('#clearBtn');
 const grid = document.querySelector('#gridBtn');
 
-
 let currentMode = 'draw';
-erase.onclick = () => {
+erase.onclick= () => {
   currentMode = 'erase'
 };
-draw.onclick = () => {
+draw.onclick= () => {
   currentMode = 'draw'
 };
 
@@ -51,7 +50,7 @@ function sizing(side) {
   }
 
   squares = document.querySelectorAll('.square');
-
+  console.log(clear, grid);
   clear.onclick = () => {
     for (const square of squares) {
       square.classList.remove('hover');
@@ -74,6 +73,7 @@ function sizing(side) {
     }
   }
 }
+
 sizing(16);
 
 let sizeInput = document.querySelector('#size-input');
