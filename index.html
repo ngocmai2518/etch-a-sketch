@@ -6,9 +6,26 @@
   <title>Etch a Sketch</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<body>
   <div class="container">
-    <div>Sketch Board</div>
-    <div class="board"></div>
+    <div class="headline">Sketch Board</div>
+    <div class="main">
+      <div class="navigation side">
+        <button class="drawBtn">Draw</button>
+        <button class="eraseBtn">Erase</button>
+        <button class="resetBtn">Reset</button>
+        <div class="sizing">
+          "Please enter number of squares per side"
+          <input id="size-input">
+          <div id="note"></div>
+        </div>
+      </div>
+      <div class="board"></div>
+      <div class="side"></div>
+    </div>
+    <div class="footnote"></div>
+    
   </div>
   <script src="script.js"></script>
+</body>
 </html>
