@@ -29,6 +29,10 @@ sizeInput.addEventListener('keydown', function(event) {
         sizing(size);
       } else {note.innerHTML = 'Please enter a number';};
     sizeInput.value = "";
-    }})
+}});
 
-        
+const squares = document.querySelectorAll('.square');
+for (const square of squares) {
+  board.addEventListener('mousedown', () =>{
+  square.addEventListener('mouseover', () => {square.classList.add('hover')
+})})};
