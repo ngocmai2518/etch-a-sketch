@@ -32,7 +32,36 @@ sizeInput.addEventListener('keydown', function(event) {
 }});
 
 const squares = document.querySelectorAll('.square');
+const draw = document.querySelector('#drawBtn');
+const erase = document.querySelector('#eraseBtn');
+
+let currentMode = 'draw';
+erase.onclick = () => {
+  currentMode = 'erase'
+};
+draw.onclick = () => {
+  currentMode = 'draw'
+};
+
+let mousePressed = false 
+document.onmousedown= () => {
+  mousePressed = true
+};
+document.onmouseup= () => {
+  mousePressed = false
+};
+
+function toggleHover(square) {
+  if (currentMode === 'draw' && mousePressed) {
+    square.classList.add('hover');
+  } else if (currentMode === 'erase' && mousePressed) {
+    square.classList.remove('hover');
+  }
+}
+
+// Attach event listeners to squares
 for (const square of squares) {
-  board.addEventListener('mousedown', () =>{
-  square.addEventListener('mouseover', () => {square.classList.add('hover')
-})})};
+  square.addEventListener('mouseover', () => {
+    toggleHover(square);
+  });
+}
