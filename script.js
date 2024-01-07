@@ -81,12 +81,13 @@ sizeInput.addEventListener('keydown', function(event) {
   note.innerHTML = "";
   if (event.key === 'Enter') {
     let size = parseInt(sizeInput.value);
-    if (!isNaN(size)) {
+    if (!isNaN(size) && size < 100 && size > 0) {
       sizing(size);
       grid.innerHTML = 'Hide Grid';
       currentGridMode = 'show';
     } else {
-      note.innerHTML = 'Please enter a number';};
+      note.innerHTML = 'Please enter a positive integer smaller than 100';
+    };
   sizeInput.value = "";
 }});
 
