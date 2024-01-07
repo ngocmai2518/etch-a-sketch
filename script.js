@@ -23,12 +23,14 @@ let sizeInput = document.querySelector('#size-input');
 const note = document.querySelector('#note');
 
 sizeInput.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-      let size = parseInt(sizeInput.value);
-      if (!isNaN(size)) {
-        sizing(size);
-      } else {note.innerHTML = 'Please enter a number';};
-    sizeInput.value = "";
+  note.innerHTML = "";
+  if (event.key === 'Enter') {
+    let size = parseInt(sizeInput.value);
+    if (!isNaN(size)) {
+      sizing(size);
+    } else {
+      note.innerHTML = 'Please enter a number';};
+  sizeInput.value = "";
 }});
 
 const squares = document.querySelectorAll('.square');
@@ -64,4 +66,11 @@ for (const square of squares) {
   square.addEventListener('mouseover', () => {
     toggleHover(square);
   });
+}
+
+const reset = document.querySelector('#resetBtn');
+reset.onclick = () => {
+  for (const square of squares) {
+    square.classList.remove('hover');
+  }
 }
