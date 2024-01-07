@@ -6,10 +6,10 @@ const clear = document.querySelector('#clearBtn');
 const grid = document.querySelector('#gridBtn');
 
 let currentMode = 'draw';
-erase.onclick= () => {
+erase.onclick = () => {
   currentMode = 'erase'
 };
-draw.onclick= () => {
+draw.onclick = () => {
   currentMode = 'draw'
 };
 
@@ -28,8 +28,6 @@ function toggleHover(square) {
     square.classList.remove('hover');
   }
 }
-
-let currentGridMode = 'show';
 
 function sizing(side) {
   // Clear existing rows
@@ -56,7 +54,7 @@ function sizing(side) {
       square.classList.remove('hover');
     }
   }
-
+  let currentGridMode = 'show';
   grid.onclick = () => {
     if (currentGridMode === 'show') {
       for (const square of squares) {
@@ -85,6 +83,8 @@ sizeInput.addEventListener('keydown', function(event) {
     let size = parseInt(sizeInput.value);
     if (!isNaN(size)) {
       sizing(size);
+      grid.innerHTML = 'Hide Grid';
+      currentGridMode = 'show';
     } else {
       note.innerHTML = 'Please enter a number';};
   sizeInput.value = "";
