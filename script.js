@@ -2,7 +2,7 @@ const board = document.querySelector('.board');
 let rows = [];
 const draw = document.querySelector('#drawBtn');
 const erase = document.querySelector('#eraseBtn');
-const reset = document.querySelector('#resetBtn');
+const clear = document.querySelector('#clearBtn');
 const grid = document.querySelector('#gridBtn');
 
 
@@ -52,7 +52,7 @@ function sizing(side) {
 
   squares = document.querySelectorAll('.square');
 
-  reset.onclick = () => {
+  clear.onclick = () => {
     for (const square of squares) {
       square.classList.remove('hover');
     }
